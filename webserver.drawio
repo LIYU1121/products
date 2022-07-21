@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-17T05:09:23.689Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="0aNNlj98rYE-YDgcAss6" version="20.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-21T07:50:36.608Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Tzs9N87M4fbzYyUlNSyW" version="20.1.1" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
-    <mxGraphModel dx="782" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -79,11 +79,11 @@
         <mxCell id="hTme4FrNAQkry3wzWzrD-132" value="" style="line;strokeWidth=2;html=1;fontSize=10;fontFamily=Helvetica;" parent="1" vertex="1">
           <mxGeometry x="230" y="410" width="30" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="hTme4FrNAQkry3wzWzrD-92" value="线程同步类" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="1" vertex="1">
+        <mxCell id="hTme4FrNAQkry3wzWzrD-92" value="线程同步类" style="shape=table;startSize=20;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="1" vertex="1">
           <mxGeometry x="950" y="200" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-93" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-92" vertex="1">
-          <mxGeometry y="30" width="140" height="20" as="geometry" />
+          <mxGeometry y="20" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-94" value="1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-93" vertex="1">
           <mxGeometry width="19" height="20" as="geometry">
@@ -96,7 +96,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-96" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-92" vertex="1">
-          <mxGeometry y="50" width="140" height="20" as="geometry" />
+          <mxGeometry y="40" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-97" value="2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-96" vertex="1">
           <mxGeometry width="19" height="20" as="geometry">
@@ -109,7 +109,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-99" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-92" vertex="1">
-          <mxGeometry y="70" width="140" height="20" as="geometry" />
+          <mxGeometry y="60" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="hTme4FrNAQkry3wzWzrD-100" value="3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fontSize=11;fontColor=#000000;strokeColor=default;fontFamily=Helvetica;" parent="hTme4FrNAQkry3wzWzrD-99" vertex="1">
           <mxGeometry width="19" height="20" as="geometry">
@@ -631,6 +631,30 @@
         </mxCell>
         <mxCell id="If7hi21jr3shKMRsduzb-253" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;数据库连接池：维护若干个数据库连接&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=11;fontColor=#000000;startSize=30;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" parent="1" vertex="1">
           <mxGeometry x="1520" y="620" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-1" value="使用mutex的init和destroy构造析构；&lt;br&gt;lock和unlock上锁和解锁；&lt;br&gt;私有数据，互斥锁，C，get函数获取" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1247.5" y="115" width="225" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-2" value="C封装&lt;br&gt;私有：类型&lt;br&gt;公有：函数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-3" value="构造失败，即非0，抛出异常" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1104" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-4" value="条件变量cond&lt;br&gt;wait，线程阻塞（和唤醒函数配套使用，脱离阻塞）&lt;br&gt;唤醒至少一个signal&lt;br&gt;全部唤醒broadcast&lt;br&gt;线程上锁的，解锁，阻塞，唤醒后，重新上锁" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="210" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-5" value="Sem，信号量/灯，资源&lt;br&gt;wait，等待信号量（加锁，为0阻塞，每次调用-1资源）&lt;br&gt;post，增加信号量（解锁，+1资源）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="210" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-6" value="线程同步，有pthread前缀" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1305" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-7" value="有进程、线程选项" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="145" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-8" value="trylock、trywait不会阻塞" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="40" width="130" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
