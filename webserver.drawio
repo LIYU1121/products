@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-21T08:00:45.666Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Zqn3xZEv--UsJq_vIvAI" version="20.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-21T08:01:03.499Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="WIBuRVDcBBLVJTpg0G9V" version="20.1.1" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1022" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -656,7 +656,7 @@
         <mxCell id="XWN4lsLQh2MdpYptvqTv-8" value="trylock、trywait不会阻塞" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1450" width="130" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-9" value="资源大于1，需要先信号灯，然后上锁；不然会出现，消费者上锁，生产者生产不了" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-9" value="资源大于1，需要先信号灯，然后上锁；不然会出现，消费者上锁，生产者生产不了，死锁" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1740" y="5" width="172" height="80" as="geometry" />
         </mxCell>
       </root>
