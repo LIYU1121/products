@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-21T08:03:34.916Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="VShBAdalp6Y_QD65D980" version="20.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-22T06:57:52.261Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="5nnc_rBPHyksAnlE4i9u" version="20.1.3" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1022" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -632,32 +632,47 @@
         <mxCell id="If7hi21jr3shKMRsduzb-253" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;数据库连接池：维护若干个数据库连接&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=11;fontColor=#000000;startSize=30;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" parent="1" vertex="1">
           <mxGeometry x="1520" y="620" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-1" value="使用mutex的init和destroy构造析构；&lt;br&gt;lock和unlock上锁和解锁；&lt;br&gt;私有数据，互斥锁，C，get函数获取" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-1" value="使用mutex的init和destroy构造析构；&lt;br&gt;lock和unlock上锁和解锁；&lt;br&gt;私有数据，互斥锁，C，get函数获取" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1247.5" y="115" width="225" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-2" value="C封装&lt;br&gt;私有：类型&lt;br&gt;公有：函数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-2" value="C封装&lt;br&gt;私有：类型&lt;br&gt;公有：函数" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="960" y="130" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-3" value="构造失败，即非0，抛出异常" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-3" value="构造失败，即非0，抛出异常" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1104" y="130" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-4" value="条件变量cond&lt;br&gt;wait（&lt;b&gt;经常在while循环使用&lt;/b&gt;），线程阻塞（和唤醒函数配套使用，脱离阻塞）&lt;br&gt;唤醒至少一个signal&lt;br&gt;全部唤醒broadcast&lt;br&gt;线程上锁的，解锁，阻塞，唤醒后，重新上锁" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-4" value="条件变量cond&lt;br&gt;wait（&lt;b&gt;经常在while循环使用&lt;/b&gt;），线程阻塞（和唤醒函数配套使用，脱离阻塞）&lt;br&gt;唤醒至少一个signal&lt;br&gt;全部唤醒broadcast&lt;br&gt;线程上锁的，解锁，阻塞，唤醒后，重新上锁" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1490" y="115" width="350" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-5" value="Sem，信号量/灯，资源&lt;br&gt;wait，等待信号量（加锁，为0阻塞，每次调用-1资源）&lt;br&gt;post，增加信号量（解锁，+1资源）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-5" value="Sem，信号量/灯，资源&lt;br&gt;wait，等待信号量（加锁，为0阻塞，每次调用-1资源）&lt;br&gt;post，增加信号量（解锁，+1资源）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1880" y="115" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-6" value="线程同步，有pthread前缀" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-6" value="线程同步，有pthread前缀" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1300" y="30" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-7" value="Sem有进程、线程选项&lt;br&gt;生产信号灯，消费信号灯&lt;br&gt;初始，左有，右无&lt;br&gt;总资源为1，单生产单消费，状态转移，顺序执行同步；&lt;br&gt;&lt;b&gt;总资源大于1，需要互斥锁&lt;/b&gt;保持同步&lt;br&gt;多生产、消费，生产" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-7" value="Sem有进程、线程选项&lt;br&gt;生产信号灯，消费信号灯&lt;br&gt;初始，左有，右无&lt;br&gt;总资源为1，单生产单消费，状态转移，顺序执行同步；&lt;br&gt;&lt;b&gt;总资源大于1，需要互斥锁&lt;/b&gt;保持同步&lt;br&gt;多生产、消费，生产" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1800" y="220" width="410" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-8" value="trylock、trywait不会阻塞" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-8" value="trylock、trywait不会阻塞" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1590" y="20" width="130" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="XWN4lsLQh2MdpYptvqTv-9" value="资源大于1，需要先信号灯，然后上锁；不然会出现，消费者上锁，生产者生产不了，死锁" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XWN4lsLQh2MdpYptvqTv-9" value="资源大于1，需要先信号灯，然后上锁；不然会出现，消费者上锁，生产者生产不了，死锁" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1909" y="20" width="172" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nItbhOzDQ_j7M3Wcagtx-1" value="线程池，任务队列的数据类型是啥，函数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nItbhOzDQ_j7M3Wcagtx-2" value="1.线程池类：&lt;br&gt;规定了创建线程的数量和任务请求队列的最大数量；&lt;br&gt;2.构造函数：&lt;br&gt;进行了线程的创建，使用this传入，保证了静态函数worker（线程执行函数）可以访问类内成员。并进行了线程的分离，保证不会主线程终止带来子线程的终止；&lt;br&gt;3.线程的执行函数worker：&lt;br&gt;运行run，while检测（线程池是否停止运行），&lt;br&gt;取出任务队列中任务前，防止多个线程访问公共资源任务队列，进行互斥锁，同时使用信号量保证消费者线程（工作线程）的个数&lt;br&gt;&lt;br&gt;检测到任务队列不为空，取出任务request执行任务" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="610" y="410" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="nItbhOzDQ_j7M3Wcagtx-3" value="append任务队列时，上锁，保证不超出任务队列大小时加入，消费者信号灯post，+1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="630" width="120" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="nItbhOzDQ_j7M3Wcagtx-4" value="只要访问公共资源任务队列，就需要上锁" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="530" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nItbhOzDQ_j7M3Wcagtx-5" value="新信号灯（只有消费者信号灯，-1）wait再锁" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="690" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
