@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-23T15:04:48.474Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="89e3NyihV_qqxhgXxkH4" version="20.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-23T15:05:56.234Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="jc-CzagimaUZsZgIc6aE" version="20.1.4" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="2044" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -761,7 +761,7 @@
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-34" value="一次性读完数据后，对应客户端http连接的类地址压入任务队列，信号灯sem ，post，+1资源" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="2037.5" y="2911.25" width="120" height="92.5" as="geometry" />
         </mxCell>
-        <mxCell id="0q4AZMgEHPv3-rVPQX4F-35" value="主线程一次性写完" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-35" value="主线程一次性写完，写给socket" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="2180" y="2927.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-36" value="断开连接、发生错误" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
@@ -865,6 +865,9 @@
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-84" value="解锁" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="2467" y="2530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-85" value="读，插入请求到任务队列，工作线程处理" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2050" y="3003.75" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
