@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-23T14:47:27.909Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="hXGcaDtUgCmd2Lgq-q9P" version="20.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-23T14:51:52.036Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="AFc_4z4y_KlylGrVposm" version="20.1.4" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
-    <mxGraphModel dx="1903" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2105" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -731,8 +731,8 @@
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-21" value="&lt;b&gt;Listenfd加入&lt;/b&gt;&lt;b&gt;epollfd中，epollctl&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-287" y="725" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0q4AZMgEHPv3-rVPQX4F-23" value="主线程的流程" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-450" y="285" width="120" height="80" as="geometry" />
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-23" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;主线程的流程&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="285" width="180" height="105" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-24" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="-500" y="804" width="50" height="166" as="geometry" />
@@ -742,6 +742,15 @@
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-26" value="epoll_wait()循环检测，" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-285" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-28" value="产生connfd，注册到epollfd中" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="1010" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-29" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;就绪的文件描述符Events（for遍历就绪的）&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-293.5" y="900" width="137" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-30" value="是Listenfd" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-295" y="1000" width="140" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
