@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-23T15:00:05.682Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="pSLVWZ415PIdwMweP9GS" version="20.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-23T15:03:27.756Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Xro6yU1OKDaBPt9bu_6d" version="20.1.4" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
-    <mxGraphModel dx="3407" dy="1583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2044" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -732,7 +732,7 @@
           <mxGeometry x="1943" y="2535" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-23" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;主线程的流程&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1710" y="2095" width="180" height="105" as="geometry" />
+          <mxGeometry x="1621.5" y="2095" width="180" height="105" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-24" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="1730" y="2614" width="50" height="166" as="geometry" />
@@ -844,6 +844,27 @@
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-77" value="trylock、trywait不会阻塞" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2137.5" y="1447.5" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-78" value="处理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2670" y="2175" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-79" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;工作线程的流程&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2440" y="2140" width="180" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-80" value="线程池的标志位true" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2470" y="2255" width="113" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-81" value="先sem，wait后mutex互斥锁" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2463" y="2350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-82" value="sem保证工作线程的个数" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2678" y="2350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-83" value="任务队列不为空" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2487" y="2430" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0q4AZMgEHPv3-rVPQX4F-84" value="解锁" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="2467" y="2530" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
