@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T05:22:13.988Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="SfFhKJedPTbrYnJWPeYJ" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T05:43:10.376Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="HXZqUmS9Q2UAkJjcL6z2" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1110,7 +1110,7 @@
           <mxGeometry y="78" width="850" height="26" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--88" value="优化，定时的检测不活跃的连接，释放掉" style="shape=tapeData;whiteSpace=wrap;html=1;perimeter=ellipsePerimeter;" vertex="1" parent="1">
-          <mxGeometry x="2835" y="2525" width="120" height="80" as="geometry" />
+          <mxGeometry x="2838.8" y="2360" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--89" value="客户端进来的时间" style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3012" y="2614" width="100" height="80" as="geometry" />
@@ -1118,7 +1118,7 @@
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--91" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="3279" y="2525" width="713" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--92" value="定时器链表，双向的节点代表，升序时间，秒数，超时时间越长，秒数越大" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--91">
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--92" value="定时器链表，双向的节点代表，升序时间，秒数(time(NULL)+15)，超时时间越长，秒数越大" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--91">
           <mxGeometry y="30" width="713" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--93" value="它是一个升序时间、双向链表，且带有头节点和尾节点。" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--91">
@@ -1163,7 +1163,7 @@
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--101" value="主线程的影响" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="3327" y="2923" width="743" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--102" value="每个客户端进来，创建一个定时器类，设置其回调函数和超时时间，然后绑定定时器与用户数据，最后将定时器添加到定时器链表中" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--101">
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--102" value="每个客户端进来，创建一个定时器类，设置其回调函数和超时时间15，然后绑定定时器与用户数据，最后将定时器添加到定时器链表中" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--101">
           <mxGeometry y="30" width="743" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--103" value="pipefd[0]，读事件就绪，如果是SIGALRM就将timeout置一，遍历完就绪的文件描述符后，检查有无超时的客户端连接，超时删除" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--101">
@@ -1216,6 +1216,9 @@
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--125" value="" style="shape=stencil(lVfLctswDPwaXTEkAYLkOU3/IzNxak1dO+O4bfL3haqRLcL2trnRMpbEa5fgwA9v26fXzZDC2+l4+L75PT6ftgN/GVIa99vNcTzZauDHgR9eDsfNt+Ph5/55/v36NFlOqx+HX9MO7zNOKolMqBQ+5i9KOf398HW23437tX2h0jr7mKjqfUAOlLUDpEBJACBTTD2gEiNAI+YOwLZFuQ8o5lLtAJJh0DVS7AFZqAKXGlPsg1ah1O4DYggUQocomUoGPumSlAVQrZQgCEtT7fPaMgWQpsSUepdaIwWAWEj6qFdh3UZEKsUfkUHUSsXFYL2BYljKdLbXpfY37a0z+lZqQgy628LLvX2kBvyPJP3+1VIaAd0ouyIXyiDeRsHZ6+LhbX+EpC9AzZSAQxN51QMioELKVIMHIO5wWLi4ihkJBjO16JOaQNeZPKircqQMgjaA9KJnBG+Aa+ZSdtRRioD/VrjqTqgUQKNaWkMftDGHkcI0kis2N3BCZNLkAQWcUBeFW4UAC03Ncd/qzIg70UVsnQfsrxS1JSqQy16LAuQ++2vHBBi1namja1MlQQVIpFfMEdCmBsjtMwARn6LppgMls1uM+xiKkAJ9scvcuaQKkyrsqZZ1UZz/ZL8olGC7Q6Tva66k4ITpEnHzRYAjz0S13iXbAnKz+NazUgZM5tC7hIcFs1c38cBxJJ3b4BwBNSTy7IcRu9iReqnf3zKKrnHTtursYVOkZbuLPZpD+KonAsw/m1xHZ59BfuRqDonEwB+bRzm7/DOor03lbkA9i/dt+7oo7aV/AvL/s6+Ef9rb4vIkeRl3u/lFs/7fP2Hs0/z84cc/);lineShape=1;" vertex="1" parent="1">
           <mxGeometry x="2697.8963736836686" y="2886.7749636634994" width="15.12956389811734" height="36.28015759564141" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--126" value="&lt;h1&gt;待优化：&lt;/h1&gt;&lt;div&gt;http，post请求&lt;/div&gt;&lt;div&gt;数据库&lt;/div&gt;&lt;div&gt;reactor&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2873" y="3250" width="207" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
