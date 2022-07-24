@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T03:05:58.604Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="hQ8bjCaFrGg04p3EMH5s" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T04:05:41.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="EaWYHhDRSnrc_trT1U0X" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -918,7 +918,7 @@
           <mxGeometry x="2090" y="1733" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--17" value="epoll的oneshot" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="2968.5" y="2267.5" width="720" height="180" as="geometry" />
+          <mxGeometry x="3000" y="2290" width="720" height="180" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--18" value="EV边沿触发，只触发一次epoll，while读取数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
           <mxGeometry y="30" width="720" height="30" as="geometry" />
@@ -1068,16 +1068,19 @@
           <mxGeometry x="3371.9" y="1500.71" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--73" value="http_process_write，响应" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="2990" y="2020" width="850" height="104" as="geometry" />
+          <mxGeometry x="2990" y="2020" width="850" height="130" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--74" value="根据http报文解析的结果进行响应" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
           <mxGeometry y="26" width="850" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--75" value="根据响应报文格式进行，顺序往写缓冲区写入数据，状态行（404），响应头，行，响应数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--75" value="根据响应报文格式进行，顺序往写缓冲区写入数据（va_list），状态行（404），响应头，行" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
           <mxGeometry y="52" width="850" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--76" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--87" value="struct iovec m_iv[2];，[0]代表是响应行、头、空行，[1]是mmp，结构体有地址、内存大小" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
           <mxGeometry y="78" width="850" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--76" value="va_list,va_start,vsnprintf,va_end，往写缓冲区写" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
+          <mxGeometry y="104" width="850" height="26" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--77" value="" style="shape=manualInput;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2951" y="1870" width="80" height="80" as="geometry" />
@@ -1093,6 +1096,18 @@
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--81" value="从状态机（判断是否为完整的一行数据）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--78">
           <mxGeometry y="78" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--82" value="http_write" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="2980" y="2163" width="850" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--83" value="主线程调用客户端类的write，响应数据（mmp，分散写writev，两次写）写" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--82">
+          <mxGeometry y="26" width="850" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--84" value="mmp用完，unmap" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--82">
+          <mxGeometry y="52" width="850" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--85" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--82">
+          <mxGeometry y="78" width="850" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
