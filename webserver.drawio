@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T06:12:27.521Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="SU_U1sCG3phxV8AECBuF" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T06:28:00.878Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="1Q4Z7sZRz7NkeG4yxWIR" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1256,8 +1256,8 @@
             <mxPoint x="2240" y="3120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--141" value="读c_socket读到读缓冲区" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="1906.5" y="3210" width="120" height="80" as="geometry" />
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--141" value="读c_socket读到读缓冲区，append（客户端越多，append越多）" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="3200" width="120" height="110" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--142" value="读缓冲区，状态机解析报文，得到正确的hhtp请求，mmp文件" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
           <mxGeometry x="2063" y="3390" width="120" height="80" as="geometry" />
@@ -1275,7 +1275,31 @@
           <mxGeometry x="2347.5" y="3060" width="159" height="99.59" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--147" value="定时器删除不活跃的客户端" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2507" y="3004" width="120" height="80" as="geometry" />
+          <mxGeometry x="2447" y="3440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--148" value="初始化8个工作线程，" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="3090" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--149" value="read完，append任务队列，会post" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1830" y="3310" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--150" value="工作线程process&lt;br&gt;工作时wait" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2170" y="3230" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--151" value="信号资源大于1，需要互斥锁，保证线程同步" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2137.5" y="3460" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--152" value="先灯，再锁" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2056" y="3465" width="77" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--154" value="空闲的工作线程就可以process" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="3390" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--155" value="post是在主线程读完数据到读取缓冲区，压入任务队列才会有一次" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="3300" width="135" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--156" value="不是一个线程就，就" style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1680" y="3410" width="100" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
