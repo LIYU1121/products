@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T02:43:28.192Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Vm8iBzeF46c0S8qjwz_V" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T02:56:35.567Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="xtM5NLi_w4U1FcISANZb" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -918,7 +918,7 @@
           <mxGeometry x="2090" y="1733" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--17" value="epoll的oneshot" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="2880" y="1930" width="720" height="180" as="geometry" />
+          <mxGeometry x="2870" y="2005" width="720" height="180" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--18" value="EV边沿触发，只触发一次epoll，while读取数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
           <mxGeometry y="30" width="720" height="30" as="geometry" />
@@ -1044,19 +1044,25 @@
           <mxGeometry x="3568.5" y="1586.56" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--65" value="http_process_read，解析" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="3180" y="1727.5" width="557" height="150" as="geometry" />
+          <mxGeometry x="3084.38" y="1737.5" width="765.62" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--66" value="解析是否为一行完整的数据，\r\\n；或者主状态机是否为解析请求行" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
-          <mxGeometry y="30" width="557" height="30" as="geometry" />
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--66" value="主状态机是否为解析请求行；或者解析是否为一行完整的数据（从状态机），\r\\n；while，" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="30" width="765.62" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--67" value="解析请求行、请求头、请求数据，可以通过正则表达式获取，传统字符串" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
-          <mxGeometry y="60" width="557" height="30" as="geometry" />
+          <mxGeometry y="60" width="765.62" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--70" value="状态转移，解析完请求同行后，主状态机状态切换为解析请求头，。。。直到" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
-          <mxGeometry y="90" width="557" height="30" as="geometry" />
+          <mxGeometry y="90" width="765.62" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--68" value="直到解析得到一个完整、正确的HTTP请求时，我们就分析目标文件的属性，do_request()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
-          <mxGeometry y="120" width="557" height="30" as="geometry" />
+          <mxGeometry y="120" width="765.62" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--71" value="do_request()，根据网站的根目录，判断请求的文件属性是什么，能否访问等，访问以只读方式打开文件" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="150" width="765.62" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--72" value="未打开的文件创建内存映射mmp（用完还要unmp），close文件，return文件请求获取成功的解析结果File_request。写的时候发送给对应" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="180" width="765.62" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--69" value="http连接的初始化" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3371.9" y="1500.71" width="190" height="120" as="geometry" />
