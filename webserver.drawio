@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T01:10:57.523Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Cq32pRhpOiERao_t1U5A" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T02:00:52.937Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="5hs20qx8-XMwVvqQkxJ6" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -916,6 +916,27 @@
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--16" value="通信socket设置为非阻塞，读操作，读缓冲区0不会阻塞" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2090" y="1733" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--17" value="epoll的oneshot" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="2920" y="1860" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--18" value="EV边沿触发，只触发一次epoll，while读取数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
+          <mxGeometry y="30" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--19" value="水平触发，数据没有发完就一直触发" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
+          <mxGeometry y="60" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--22" value="多线程的EV，可能会有多个线程处理同一个客户端socket" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
+          <mxGeometry y="90" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--20" value="oneshot事件使得操作系统最多触发其注册的一个可读、可写、异常事件，且只触发一次&#xa;除非使用ctl重置该文件描述符注册的epoll_oneshot事件" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
+          <mxGeometry y="120" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--23" value="所以在工作线程处理时，读操作没解析完需要重置可读oneshot,直接return；写操作生成响应后也需要重置可写以及oneshot" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
+          <mxGeometry y="150" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--21" value="主线程读到类的缓冲区，http_conn的read；工作线程从读缓冲区进行解析和生成响应报文，http_conn_process_read" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="2870" y="1718" width="260" height="122" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
