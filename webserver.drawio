@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T02:23:29.614Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="x0hmrlsR5lgH9d37rJWX" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T02:43:28.192Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="Vm8iBzeF46c0S8qjwz_V" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1039,6 +1039,27 @@
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--58" value="" style="shape=stencil(lVfLctswDPwaXTEkQRLkOU3/IzNxak9dO+M4ffx9oWqoiJC0bW+OwiWIxXIBDvzwdnx6PQzBvd1v16+HH6fn+3HgT0MIp8vxcDvd9dfAjwM/vFxvhy+36/vlefr79WlcOf76dv0+7vBzwkki50ZUcL+mL95TLn++fJ4A59NlAUhCvvYA/ZL2AdFTKh0gMAUQgRXQRwiFHAAET77PgTUC7wN8oBB7QKEEcvCJag+IuW2xfaTQSGyA5CBLeuJiABohA1qFSs9SZkp+H5AT5dABxJMDRyqeYuoBhQpIuhYK0gFqaOraBtSW4gxgcgIBxQAicYWA2rNUExUgDQVkE0FgpTVpUzj9ElEOQtLTqjFhDpm4WEAFlVZOalgB0JFm5SwACYhP68reJi2IVtVStLTCCG5VuNyMZy+CM0eKJKhwajO9aygNjFgKFE2EAG1G98vcA2YatgGpXcgFAN6HvCqceiEWXxELgIUrTTmLpFF/UOWIt7RWZMbO2RakPDAwptEFjL4zCXYB07M0LYcAhbxxAd0C0ZRXxlTxkZIV04KHPTXVdQikplUPUgAy/P8GiFgbKPol7AOyp9KXurhmbttdjhvtcw/iRtx24y221FngFdLWbpLOs5Ns50BiGnWCAVwzlcXoUEHKq9vA0hr3znm4l0XQdgJk4bNVns5j6EYHaZYyS7VQRrOMHthoO7YJbXumZDvxKUVg/Ti49By5JsTt9cF2H3zVVGPV7u8ApTpEczDrI3ALyZTN0E0e7a+E9hUI0I1knkBmDUFD1fW17zvaOoHkpDb3/KiXB818nBv780gjYG+99ZU2f+/xY+rrddpGgsg2gL56YIWjHUf+8kz6h3eV/vh4lb2czufpUbf8v33F6afpBciPvwE=);lineShape=1;" vertex="1" parent="1">
           <mxGeometry x="3259.636397816148" y="1694.0582158136503" width="32.00579338031912" height="32.41021879067512" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--60" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3568.5" y="1586.56" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--65" value="http_process_read，解析" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="3180" y="1727.5" width="557" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--66" value="解析是否为一行完整的数据，\r\\n；或者主状态机是否为解析请求行" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="30" width="557" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--67" value="解析请求行、请求头、请求数据，可以通过正则表达式获取，传统字符串" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="60" width="557" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--70" value="状态转移，解析完请求同行后，主状态机状态切换为解析请求头，。。。直到" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="90" width="557" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--68" value="直到解析得到一个完整、正确的HTTP请求时，我们就分析目标文件的属性，do_request()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--65">
+          <mxGeometry y="120" width="557" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--69" value="http连接的初始化" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3371.9" y="1500.71" width="190" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
