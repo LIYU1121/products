@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T03:01:54.859Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="k_kQolEc1-UsZWywAcPy" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T03:05:58.604Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="hQ8bjCaFrGg04p3EMH5s" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1073,7 +1073,7 @@
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--74" value="根据http报文解析的结果进行响应" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
           <mxGeometry y="26" width="850" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--75" value="根据响应报文格式进行，顺序生成，状态行（404），响应头，行，响应数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--75" value="根据响应报文格式进行，顺序往写缓冲区写入数据，状态行（404），响应头，行，响应数据" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
           <mxGeometry y="52" width="850" height="26" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--76" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--73">
