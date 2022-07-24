@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-24T05:43:10.376Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="HXZqUmS9Q2UAkJjcL6z2" version="20.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-24T06:12:27.521Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="SU_U1sCG3phxV8AECBuF" version="20.2.0" type="github">
   <diagram id="chODi_v-n7cq65_RIqqo" name="Page-1">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -849,7 +849,7 @@
           <mxGeometry x="2670" y="2175" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-79" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;工作线程的流程&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2440" y="2140" width="180" height="105" as="geometry" />
+          <mxGeometry x="2403" y="2162.5" width="180" height="105" as="geometry" />
         </mxCell>
         <mxCell id="0q4AZMgEHPv3-rVPQX4F-80" value="线程池的标志位true" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="2470" y="2255" width="113" height="80" as="geometry" />
@@ -894,7 +894,7 @@
           <mxGeometry x="1340" y="1430" width="180" height="118" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--2" value="解析http请求并且生成响应" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="2570" y="2040" width="120" height="80" as="geometry" />
+          <mxGeometry x="2210" y="1880" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--3" value="监听socket水平触发，通信socket边沿触发" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1920" y="1717.5" width="120" height="80" as="geometry" />
@@ -935,8 +935,8 @@
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--23" value="所以在工作线程处理时，读操作没解析完需要重置可读oneshot,直接return；&#xa;如果解析完了，写操作生成响应后也需要重置可写以及oneshot" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--17">
           <mxGeometry y="150" width="720" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LmTQRD-9G7nvdm8Ks5E--21" value="主线程读到类的缓冲区，http_conn的read；工作线程从读缓冲区进行解析和生成响应报文，http_conn_process_read" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="2870" y="1718" width="260" height="122" as="geometry" />
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--21" value="主线程读socket，写到类的读缓冲区，http_conn的read；工作线程从读缓冲区进行解析和生成响应报文，http_conn_process_read" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="2790" y="1718" width="260" height="122" as="geometry" />
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--25" value="" style="shape=stencil(lVfLctswDPwaXTEkwRfOafofmYlTe+raGcdtk78vVEWxCCob+ybTWBJLLB4c+O5l+/C8GYJ7OZ+OPzd/d4/n7cDfhhB2h+3mtDvr18D3A989HU+bH6fj78Pj9Pv5YbQcv34d/4w7vE447xw5N8KCe3tfopL+L3yfAPvdYQGQSlIa+0rJQfvA7f5CsQJAJpcbQPjYYh2gDocGwJVi+BxQMyXfAKJQBpyrI0kNIDuqgENJFGoDKJ484JCFkrlVR4wATLV1qZZ5i3VAoBgbgOgKIJ000NICCnGEJ1RvARW5xMQtaRVLRKQdZW8BAuKQItVWGiKQdMzdCUIVyJsz1WgByKWg4uNbAD5Tybe4pPmYbuEcuv3xpXYF44uoOUpmfyyLSFytPdKd9+QM4UwCLkgLUBULeA/7+g1phLIFRAEUHAVvAQnprst/BRRwQiod6UIeRC37uWItABkBuNOR1mGU//0Jda4I13IQYgAYb6lLhQIiPcbBWYAADmOkW5cWDfJTMVV7BOoNK3JVWgAQuyop5JGWuvzB9tpozB0FCkB6mlxtAdPOE1F+ap/pelsA/dkXm27aPR2oMIHnXrnszyBoWiONS5cEXC/zTL6bMRhcqvaF3E8xqJGUeey6ck5SgKnDeBDjZAc3POgpA/HGHk0krDNU2wndLJR1mcY5phd7mAYfXe9iz4Bvyr0/HtjnOE9oF3uU+KpJM4F9YS9zF7vOH51SfbmBr47BYv1B96kNhi1fFC+tIs7qB+nh5pfFFQD9uDxknnb7/fQOWv5vHz66ND2a+P4f);lineShape=1;" vertex="1" parent="1">
           <mxGeometry x="2927.9946726509033" y="1606.5952230553662" width="4.420413997689138" height="80.13729984096517" as="geometry" />
@@ -1219,6 +1219,63 @@
         </mxCell>
         <mxCell id="LmTQRD-9G7nvdm8Ks5E--126" value="&lt;h1&gt;待优化：&lt;/h1&gt;&lt;div&gt;http，post请求&lt;/div&gt;&lt;div&gt;数据库&lt;/div&gt;&lt;div&gt;reactor&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="2873" y="3250" width="207" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--127" value="主线程、工作线程" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="2464.36" y="1980" width="494.44" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--128" value="1.主线程的读socket，写到读缓冲区末尾" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--127">
+          <mxGeometry y="30" width="494.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--129" value="2.工作线程的解析process_read，读取读缓冲区，解析返回没读完，oneshot读&#xa;，解析得到正确http请求，创建mmp文件；" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--127">
+          <mxGeometry y="60" width="494.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--134" value="3.工作线程解析得到一个正确的http请求后，才能进行响应，&#xa;process_write，得到响应行（状态、title）、响应头、空行，写入类的写缓冲区" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--127">
+          <mxGeometry y="90" width="494.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--130" value="4.主线程，分别将写缓冲区数据和mmp数据发送给socket，释放资源，oneshot重置写" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--127">
+          <mxGeometry y="120" width="494.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--135" value="5.长连接，。。。" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="LmTQRD-9G7nvdm8Ks5E--127">
+          <mxGeometry y="150" width="494.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--136" value="read" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2060" y="3180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--137" value="write" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2283" y="3180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--138" value="process_read" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2060" y="3300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--139" value="process_write" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2283" y="3300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--140" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="LmTQRD-9G7nvdm8Ks5E--136" target="LmTQRD-9G7nvdm8Ks5E--138">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2190" y="3170" as="sourcePoint" />
+            <mxPoint x="2240" y="3120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--141" value="读c_socket读到读缓冲区" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="1906.5" y="3210" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--142" value="读缓冲区，状态机解析报文，得到正确的hhtp请求，mmp文件" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="2063" y="3390" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--143" value="根据请求解析结果，生成响应行、头、空格，写入写缓冲区" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="2280" y="3390" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--144" value="分两次发送，写缓冲区和mmp到c_socket" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="2457" y="3200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--145" value="EV触发，一次性读完（while）" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2170" y="3060.41" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--146" value="oneshot避免多线程同时读或者写" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2347.5" y="3060" width="159" height="99.59" as="geometry" />
+        </mxCell>
+        <mxCell id="LmTQRD-9G7nvdm8Ks5E--147" value="定时器删除不活跃的客户端" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2507" y="3004" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
